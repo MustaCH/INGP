@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import ShinyText from './ShinyText.astro';
 
 const socialMedia = await getCollection('social');
 ---
@@ -18,15 +17,15 @@ const socialMedia = await getCollection('social');
 				<div class="border-b-2 border-black pb-2 w-full gap-1 uppercase">
 					<div class="flex justify-evenly gap-8 py-4 h-0">
 						{
-							socialMedia.map((media) => <a href={media.data.url} class="flex items-center gap-1 capitalize"><img src={media.data.icon}/><p>{media.data.title}</p></a>)
+							socialMedia.map((media) => <a href={media.data.url} class="hover:scale-110 transition-all duration-150 flex items-center gap-1 capitalize"><img src={media.data.icon}/><p>{media.data.title}</p></a>)
 						}	
 					</div> 				
 				</div>
 			</div>
 		</div>
 		<div class="relative flex justify-center">
-			<div class="absolute w-96 h-96 md:left-[10%] top-[-5%] md:top-[-8%] border-8 border-double border-black rounded-full"></div>
-			<div class="absolute grid place-content-center w-24 h-24 right-0 md:right-[16%] bottom-[20%] md:bottom-[30%] rounded-full bg-black animate-spin-slow">
+			<div class="absolute w-96 h-96 md:left-[10%] top-[-5%] md:top-[-8%] border-8 border-double border-primary rounded-full"></div>
+			<button class="absolute grid place-content-center w-24 h-24 right-0 md:right-[16%] bottom-[20%] md:bottom-[30%] rounded-full bg-primary animate-spin-slow">
 				<div class="w-2 h-2 bg-white rounded-full"></div>
 				<svg class="absolute w-full h-full" viewBox="0 0 100 100">
 					<path
@@ -35,20 +34,20 @@ const socialMedia = await getCollection('social');
 					  fill="none"
 					/>
 					<text fill="white" font-size="10" font-family="Inter">
-					  <textPath href="#circlePath" startOffset="50%" text-anchor="bottom">
+						<textPath href="#circlePath" startOffset="50%" text-anchor="bottom">
 						Book a meet here
-					  </textPath>
+						</textPath>
 					</text>
 					<text fill="white" font-size="10" font-family="Inter">
 						<textPath href="#circlePath" startOffset="0%" text-anchor="bottom">
-						  Book a meet here
+							Book a meet here
 						</textPath>
 					</text>
 				  </svg>
-			</div>
+			</button>
 			<img class="grayscale w-72 drop-shadow-lg" src="mainpic.png" alt="main-pic">
 		</div>
-		<div class="absolute w-96 h-96 bg-white/10 rounded-full top-3 md:top-[60%] md:bottom-[-40%] left-[-40%] md:left-[6%]"></div>
-		<div class="absolute w-80 h-80 bg-white/10 rounded-full top-10 md:top-[67%] md:bottom-[-32%] left-[-35%] md:left-[9%]"></div>
+		<div class="absolute w-96 h-96 bg-white/20 rounded-full top-3 md:top-[60%] md:bottom-[-40%] left-[-40%] md:left-[6%]"></div>
+		<div class="absolute w-80 h-80 bg-white/20 rounded-full top-10 md:top-[67%] md:bottom-[-32%] left-[-35%] md:left-[9%]"></div>
    </main>
 </div>
