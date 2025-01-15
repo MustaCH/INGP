@@ -45,6 +45,7 @@ export default {
         gradient: "gradient 8s linear infinite",
         shine: "shine 5s linear infinite",
         "spin-slow": "spin 15s linear infinite",
+        "spin-slower": "spin 25s linear infinite",
       },
     },
   },

@@ -24,7 +24,12 @@ const socialMedia = await getCollection('social');
 			</div>
 		</div>
 		<div class="relative flex justify-center">
-			<div class="absolute w-96 h-96 md:left-[10%] top-[-5%] md:top-[-8%] border-8 border-double border-primary rounded-full"></div>
+			<div class="absolute w-96 h-96 md:left-[10%] top-[-5%] md:top-[-8%] bg-gradient-to-b from-primary via-transparent to-secondary rounded-full p-1 animate-spin-slow">
+				<div class="bg-secondary h-full w-full rounded-full"></div>
+			</div>
+			<div class="absolute w-80 h-80 left-[5%] md:left-[15%] top-[2%] md:top-0 bg-gradient-to-t from-primary via-transparent to-secondary rounded-full p-1 animate-spin-slow">
+				<div class="bg-secondary h-full w-full rounded-full"></div>
+			</div>
 			<button class="absolute grid place-content-center w-24 h-24 right-0 md:right-[16%] bottom-[20%] md:bottom-[30%] rounded-full bg-primary animate-spin-slow">
 				<div class="w-2 h-2 bg-white rounded-full"></div>
 				<svg class="absolute w-full h-full" viewBox="0 0 100 100">
