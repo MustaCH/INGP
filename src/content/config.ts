@@ -8,4 +8,16 @@ const social = defineCollection({
   }),
 });
 
-export const collections = { social };
+const projects = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    name: z.string(),
+    link: z.string(),
+    repository: z.string(),
+    image: z.string(),
+    stack: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { social, projects };
